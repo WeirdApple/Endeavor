@@ -187,4 +187,4 @@ class FunCog(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(ModerationCog(client))
+    client.add_cog(FunCog(client))
