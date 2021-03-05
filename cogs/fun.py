@@ -26,7 +26,7 @@ class FunCog(commands.Cog):
 
 
     #roasts
-    @client.command(aliases = ['ROAST','insult','INSULT','Roast','Insult'])
+    @commands.command(aliases = ['ROAST','insult','INSULT','Roast','Insult'])
     async def roast(ctx, member : discord.Member = None):
         if not member:
             member = ctx.author
