@@ -175,7 +175,7 @@ class FunCog(commands.Cog):
 
 
     #lovetest
-    @commands.command(aliases = ['DIE', 'Die','DICE','Dice','dice'])
+    @commands.command(aliases = ['LOVETEST','Lovetest','LoveTest'])
     async def lovetest(self, ctx, lover1 = None, lover2 = None):
         muchlove = random.randint(0,100)
         embed = discord.Embed(title = f"{ctx.author.name} is seeing if {lover1} and {lover2} really love eachother! :heart:", description = f"Lets see what happens!", color = discord.Color(0xff55ff))
