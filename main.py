@@ -8,6 +8,7 @@ from discord.utils import find, get
 import os
 import io
 import datetime
+from config import token
 
 
 status = ["me getting coded again","Almost got wiped from existence","Almost dead"]
@@ -37,4 +38,4 @@ if __name__ == '__main__':
 
 
 
-client.run("Nzc5MDQ5ODc5MzQ3MjY1NTM2.X7a4vQ.iNMYId3va8G-J3f92ZanlnSKzZA", bot = True, reconnect = True)
+client.run(token, bot = True, reconnect = True)

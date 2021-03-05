@@ -24,19 +24,20 @@ class ModerationCog(commands.Cog):
         
 
     #whois
-    a = ['Very', 'No', 'Definitely not', 'Red level sus', 'How is he sus?', 'Probably', 'Good Chance', 'Cyan level Sus','Why is he or she sus?','``ERROR 404, SUS OVERLOAD``', 'Yes, ofc', 'Yes']
     @commands.command(aliases = ['WHOIS','userinfo'])
     @commands.has_permissions(kick_members = True)
     async def whois(self, ctx, member : discord.Member):
         embed = discord.Embed(title = member.name , decription = member.display_name , color = discord.Colour.green())
         embed.add_field(name = "ID", value = member.id, inline = True)
-        embed.add_field(name = "Is sus?", value = f"{random.choice(a)}",inline = True)
         embed.add_field(name = "Is bot?", value = member.bot, inline = True)
         embed.add_field(name = "Is your friend?", value = member.is_friend(), inline = True)
-        embed.add_field(name = "Account Creaction", value = member.created_at, inline = True)
+        embed.add_field(name = "Account Creation", value = member.created_at, inline = True)
         embed.add_field(name = "Default avatar url link", value = member.default_avatar_url, inline = True)
-        embed.add_field(name = "Is avatar animated", value = member.is_avatar_animated(), inline = True)
-        embed.add_field(name = "Public Flags", value = member.public_flags)
+        embed.add_field(name = "Highest Role", value = member.top_role.name)
+
+        perms = '\n'.join(perm for perm, value in member.guild_permissions if value)
+
+        embed.add_field(name = "Permissions", value = perms)
 
         embed.set_thumbnail(url = member.avatar_url)
         embed.set_footer(icon_url = ctx.author.avatar_url, text = f"Requested by {ctx.author.name}")
