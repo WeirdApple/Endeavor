@@ -126,7 +126,7 @@ class FunCog(commands.Cog):
 
 
     #howgay
-    @command.command(aliases = ['HOWGAY','Howgay'])
+    @commands.command(aliases = ['HOWGAY','Howgay'])
     async def howgay(self, ctx, member: discord.Member = None):
         if not member:
             member = ctx.author
