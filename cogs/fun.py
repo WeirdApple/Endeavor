@@ -120,7 +120,7 @@ class FunCog(commands.Cog):
     @commands.command(aliases = ['DIE', 'Die','DICE','Dice','dice'])
     async def die(self, ctx, die = 6):
         die = random.randint(1,die)
-        embed = discord.Embed(title = f"{ctx.author.name} is rolling a die", description = f"{ctx.author.name} got {die}", color = discord.Color(0xff55ff))
+        embed = discord.Embed(title = f"{ctx.author.name} is rolling a die", description = f"{ctx.author.name} got {die}", color = discord.Colour(0xff55ff))
         embed.set_footer(text = "FYI, one dice is 'die', 2 or more dies are 'dice'. Remember that")
         await ctx.send(embed= embed)
 
@@ -139,7 +139,7 @@ class FunCog(commands.Cog):
     @commands.command(aliases = ['COINFLIP','Coinflip'])
     async def coinflip(self, ctx):
         twocoins = ['Heads','Tails']
-        embed = discord.Embed(title = f"{ctx.author.name} is flipping a coin...", description = f"{ctx.author.name} got {random.choice(twocoins)}")
+        embed = discord.Embed(title = f"{ctx.author.name} is flipping a coin...", description = f"{ctx.author.name} got {random.choice(twocoins)}", color = discord.Colour(0xff55ff))
         await ctx.send(embed = embed)
         #fix
 
