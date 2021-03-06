@@ -179,8 +179,8 @@ class FunCog(commands.Cog):
     async def lovetest(self, ctx, lover1 = None, lover2 = None):
         muchlove = random.randint(0,100)
         embed = discord.Embed(title = f"{ctx.author.name} is seeing if {lover1} and {lover2} really love eachother! :heart:", description = f"Lets see what happens!", color = discord.Color(0xff55ff))
-        embed = discord.Embed(title = f"The percentage of love is{muchlove}%")
-        embed.set_footer(text = "If it's 50 percent and lower, they're breaking up...")
+        embed.add_field(name = f"The percentage of love is{muchlove}%", field = "yeee")
+        embed.set_footer(text = "If it's 50 percent and lower, they aren't supposed to be with eachother")
         await ctx.send(embed= embed)
 
 
