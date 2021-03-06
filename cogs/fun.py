@@ -25,20 +25,6 @@ class FunCog(commands.Cog):
         await ctx.message.delete()
 
 
-    #roasts
-    @commands.command(aliases = ['ROAST','insult','INSULT','Roast','Insult'])
-    async def roast(ctx, member : discord.Member = None):
-        if not member:
-            member = ctx.author
-
-        with open("roasts.txt","r") as f:
-            for line in f:
-                roast = random.choice(line)
-                print(line)
-
-        embed = discord.Embed(title = f"Here is a roast for {member.name}...", description = roast, color = discord.Color(0xff55ff))
-        embed.add_field(name = "There you go.", value = "HaHa")
-        await ctx.send(embed = embed)
 
     #RPS GAME
     @commands.command(aliases = ['RPS','rps','Rockpaperscissors'])
