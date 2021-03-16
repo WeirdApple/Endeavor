@@ -52,8 +52,8 @@ class EventsCog(commands.Cog):
 
 	   
 	   
-	else:
-		raise error
+        else:
+            raise error
 
 
 
