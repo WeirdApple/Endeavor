@@ -34,26 +34,6 @@ class EventsCog(commands.Cog):
 
 
 
-    #errors
-    @commands.Cog.listener
-    async def on_command_error(self, ctx,error):
-        if isinstance(error,commands.MissingPermissions):
-            embed = discord.Embed(title = "<:oops:765555462808403978> You don't have permission to do that", description = "Bruh. ;-;", color = discord.Colour.red())
-            await ctx.send(embed = embed)
-            await ctx.message.delete()
-            
-        elif isinstance(error,commands.MissingRequiredArgument):
-            embed = discord.Embed(title = "<:oops:765555462808403978> Please enter in all of the required arguments.", description = "Without them, you won't do anything.", color = discord.Colour.red())
-            embed.set_footer(text = "FYI, this argument definition means a value or address passed to a procedure or function at the time of call.")
-            await ctx.message.delete()
-            await ctx.send(embed = embed)
-
-	
-
-	   
-	   
-        else:
-            raise error
 
 
 

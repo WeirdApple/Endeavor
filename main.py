@@ -28,7 +28,7 @@ async def on_ready():
 
 
 #cogs
-initial_extensions = ['cogs.moderation','cogs.fun','cogs.other','cogs.events']
+initial_extensions = ['cogs.moderation','cogs.fun','cogs.other','cogs.events','cogs.nuke']
 
 
 if __name__ == '__main__':
