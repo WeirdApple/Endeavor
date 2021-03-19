@@ -23,7 +23,7 @@ class NukeCog(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(NuleCog(client))
+    client.add_cog(NukeCog(client))
 
 
 
